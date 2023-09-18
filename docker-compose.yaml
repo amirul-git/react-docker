@@ -2,6 +2,8 @@ version: "3.8"
 services:
   react:
     build: .
-    container_name: react_docker
+    container_name: react
     ports:
       - "5173:5173"
+    volumes:
+      - .:/app
