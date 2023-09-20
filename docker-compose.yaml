@@ -2,6 +2,5 @@ version: "3.8"
 services:
   react:
     build: .
-    container_name: react-nginx
     ports:
       - "80:80"
