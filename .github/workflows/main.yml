@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "${{secrets.AWS_SERVER_RSA}}" > key.pem
           chmod 400 key.pem
-          ssh -o StrictHostKeyChecking=no -i key.pem ${{secrets.AWS_EC2_SERVER}}
+          ssh -t -o StrictHostKeyChecking=no -i key.pem ${{secrets.AWS_EC2_SERVER}}
       - name: Login to AWS CLI
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem ${{secrets.AWS_EC2_SERVER}} "aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 318770414672.dkr.ecr.ap-southeast-1.amazonaws.com"
