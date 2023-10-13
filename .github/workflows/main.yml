@@ -28,5 +28,5 @@ jobs:
           IMAGE_TAG: latest
         run: |
           docker build -t react-docker:latest .
-          docker tag react-docker:latest 318770414672.dkr.ecr.ap-southeast-1.amazonaws.com/react-docker:latest
+          docker tag react-docker:latest $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker images
