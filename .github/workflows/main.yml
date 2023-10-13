@@ -27,4 +27,5 @@ jobs:
           ECR_REPOSITORY: react-docker
           IMAGE_TAG: latest
         run: |
-          docker build -t react-docker:latest
+          docker build -t react-docker:latest .
+          docker images
