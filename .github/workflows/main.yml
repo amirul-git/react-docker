@@ -38,7 +38,7 @@ jobs:
         with:
           host: ec2-54-169-231-32.ap-southeast-1.compute.amazonaws.com
           username: ubuntu
-          key: ${{ secrets.KEY }}
+          key: ${{ secrets.AWS_SERVER_RSA }}
           script: whoami
       # - name: Connect To Server
       #   run: |
