@@ -40,3 +40,6 @@ jobs:
           script: |
             whoami
             aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 318770414672.dkr.ecr.ap-southeast-1.amazonaws.com
+            sudo docker pull 318770414672.dkr.ecr.ap-southeast-1.amazonaws.com/react-docker:latest
+            sudo docker compose down
+            sudo docker compose up -d
