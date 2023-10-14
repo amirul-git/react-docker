@@ -31,7 +31,7 @@ jobs:
     environment:
       name: production
     steps:
-      - name: Executing remote ssh commands using ssh key
+      - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ec2-54-169-231-32.ap-southeast-1.compute.amazonaws.com
@@ -39,3 +39,4 @@ jobs:
           key: ${{ secrets.AWS_SERVER_RSA }}
           script: |
             whoami
+            aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 318770414672.dkr.ecr.ap-southeast-1.amazonaws.com
