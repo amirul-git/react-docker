@@ -31,7 +31,7 @@ jobs:
     environment:
       name: production
     steps:
-      - name: executing remote ssh commands using ssh key
+      - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ec2-54-169-231-32.ap-southeast-1.compute.amazonaws.com
